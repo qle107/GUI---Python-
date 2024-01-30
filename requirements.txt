@@ -1,0 +1,4 @@
+pandas
+lxml
+PySimpleGUI
+# Add more libraries if needed

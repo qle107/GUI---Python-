@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<saranghe>
+    <child name="Frank" test="0">
+        FRANK likes EVERYONE
+    </child>
+    <unique>
+        Add a video URl here
+    </unique>
+    <child name="Texas" test="1">
+        TEXAS is a PLACE
+    </child>
+    <child name="Frank" test="2">
+        Exclusively
+    </child>
+    <unique>
+        https://www.geeksforgeeks.org/xml-parsing-python/
+    </unique>
+    <data>
+       Duma
+        <family>
+            Simon
+        </family>
+        <size>
+            13
+        </size>
+    </data>
+</saranghe>
