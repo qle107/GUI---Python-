@@ -21,9 +21,9 @@ def load_data(file_path, file_format):
             else:
                 return "Unsupported format or format is not correct"
     except FileNotFoundError:
-        return FileNotFoundError("File not found")
+        return {'error': 'file not found'}
     except Exception as error:
-        return Exception(error)
+        return {'error': str(error)}
 
 
 def save_data(data, file_path, file_format):
