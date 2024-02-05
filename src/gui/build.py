@@ -1,6 +1,11 @@
 import PySimpleGUI as sg
-import src.Controller.data as dta
+# import src.Controller.data as dta
 import pandas.core.frame as frame
+try:
+    from ..Controller import data as dta
+except ImportError:
+    # If ImportError occurs, assume script is run as a module
+    from Controller import data as dta
 
 
 def create_table(data, meta_data):
