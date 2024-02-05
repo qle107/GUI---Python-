@@ -64,7 +64,7 @@ def calculate_list(input_value):
         for i in input_value:
             if isinstance(i, numbers.Number) and if_only_number:
                 if_only_number = False
-        if if_only_number:
+        if not if_only_number:
             stats_value = calculate_numbers(input_value)
             return {'min': stats_value['min'], 'max': stats_value['max'], 'average': stats_value['average'],
                     'length': len(input_value)}
