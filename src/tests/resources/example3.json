@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "John",
+      "age": 30.23,
+      "file": "path/to/true_or_false.txt",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Alice",
+      "age": 25.34,
+      "file": "path/to/true_or_false.txt",
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "name": "Bob",
+      "age": 35.45,
+      "file": "path/to/true_or_false.txt",
+      "isActive": true
+    }
+  ]
+}

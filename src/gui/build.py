@@ -10,6 +10,8 @@ except ImportError:
 
 
 def create_table(data, meta_data):
+    right_click_menu = ['Edit',['Insert column left', 'Insert column right', 'Filter']]
+
     if isinstance(data, list) and isinstance(meta_data, list):
         return_layout = [
             [sg.Text("Select a file:")],
@@ -22,6 +24,7 @@ def create_table(data, meta_data):
                       key='table',
                       enable_click_events=True,
                       enable_events=True,
+                      right_click_menu=right_click_menu,
                       hide_vertical_scroll=True)],
             [sg.Button("Load file", key="read_button")]
         ]

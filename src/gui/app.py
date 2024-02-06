@@ -23,10 +23,12 @@ layout = build.build_layout()
 def run():
     columns_list = []
     dataframe = None
-    window = sg.Window('Python Project 2024', layout)
+    window = sg.Window('Python Project 2024', layout, finalize=True)
     # Event Loop to process "events" and get the "values" of the inputs
     while True:
         event, values = window.read()
+        table = None
+
         if event == sg.WIN_CLOSED or event == 'Cancel':  # if user closes window or clicks cancel
             break
         if event == "read_button":
@@ -38,7 +40,11 @@ def run():
                 tmp_columns = None
             if tmp_layout is not None:
                 window.close()
-                window = sg.Window('Python Project 2024', tmp_layout)
+                window = sg.Window('Python Project 2024', tmp_layout , finalize=True)
+                table = window['table']
+                table.bind("<Button-3>", "-right")
         if event[0] == "table" and event[2][0] == -1:
             sg.popup(util.calculate_list(dataframe[columns_list[event[2][1]]].to_list()))
+        if event == 'table-right':
+            print(event, values)
     window.close()
