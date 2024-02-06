@@ -104,9 +104,9 @@ def calculate_list(input_value):
         else:
             return {'length': len(input_value)}
 
-
 def get_columns_from_dataframe(data):
     if isinstance(data, frame.DataFrame):
         return data.columns.tolist()
     else:
         return None
+
